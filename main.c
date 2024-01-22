@@ -4,9 +4,9 @@
 int main(int argc, char *argv[])
 {
     int start = 0, end = 0;
-    printf("enter a number for the start of the range: ");
+    // printf("enter a number for the start of the range: ");
     scanf("%d", &start);
-    printf("enter a number for the end of the range: ");
+    // printf("enter a number for the end of the range: ");
     scanf("%d", &end);
 
     printf("The Armstrong numbers are:");
