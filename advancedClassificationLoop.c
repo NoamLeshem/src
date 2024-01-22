@@ -12,17 +12,20 @@ int power(int x, int y)
     return res;
 }
 
+int reverse(int num)
+{
+    int reversed = 0;
+    while (num != 0)
+    {
+        reversed = reversed * 10 + num % 10;
+        num /= 10;
+    }
+    return reversed;
+}
+
 int isPalindrome(int x)
 {
-    int flag = 1;
-    while (flag && x)
-    {
-        int len = snprintf(NULL, 0, "%i", x);
-        int pow = power(10, len - 1);
-        flag = x / pow == x % 10;
-        x = (x % pow) / 10;
-    }
-    return flag;
+    return x == reverse(x);
 }
 
 int isArmstrong(int x)

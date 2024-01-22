@@ -8,13 +8,17 @@ int power(int x, int y)
     return x * power(x, y - 1);
 }
 
+int reverse(int num)
+{
+    if(!num)
+        return 0;
+    int len = snprintf(NULL, 0, "%i", num);
+    return num % 10 * power(10, len-1) + reverse(num / 10);
+}
+
 int isPalindrome(int x)
 {
-    if (x % 10 == x)
-        return 1;
-    int len = snprintf(NULL, 0, "%i", x);
-    int pow = power(10, len - 1);
-    return x / pow == x % 10 && isPalindrome((x % pow) / 10);
+    return x == reverse(x);
 }
 
 int armstrongHelper(int x, int len)
