@@ -1,6 +1,6 @@
 CC = gcc
 AR = ar
-CFLAGS = -Wall -g
+CFLAGS = -Wall -g -fPIC
 
 OBJS_LOOPS = basicClassification.o advancedClassificationLoop.o
 OBJS_RECURSIVE = basicClassification.o advancedClassificationRecursion.o
