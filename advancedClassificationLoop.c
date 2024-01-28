@@ -38,5 +38,5 @@ int isArmstrong(int x)
         sum += power(temp % 10, len);
         temp /= 10;
     }
-    return sum == temp;
+    return sum == x;
 }

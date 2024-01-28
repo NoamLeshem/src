@@ -10,6 +10,8 @@ int fucktorial(int x)
 
 int isStrong(int x)
 {
+    if (!x)
+        return x;
     int temp = x;
     int sum = 0;
     while (x)
@@ -22,6 +24,9 @@ int isStrong(int x)
 
 int isPrime(int x)
 {
+    if (!x)
+    
+        return x;
     int flag = 1;
     for (int i = 2; i * i <= x && flag; i++)
         if (x % i == 0)
