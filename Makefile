@@ -27,11 +27,11 @@ maindrec: mains.o libclassrec.so
 libclassrec.a: $(OBJS_RECURSIVE)
 	$(AR) -rcs $@ $^
 libclassloops.so: $(OBJS_LOOPS)
-	$(CC) -shared -o $@ $^
+	$(CC) $(CFLAGS) -shared -o $@ $^
 libclassloops.a: $(OBJS_LOOPS)
 	$(AR) -rcs $@ $^
 libclassrec.so: $(OBJS_RECURSIVE)
-	$(CC) -shared -o $@ $^
+	$(CC) $(CFLAGS) -shared -o $@ $^
 basicClassification.o: basicClassification.c NumClass.h
 	$(CC) $(CFLAGS) -c basicClassification.c
 advancedClassificationLoop.o: advancedClassificationLoop.c NumClass.h
